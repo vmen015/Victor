@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+	<title>Cube</title>
+	
+	<style type="text/css" media="screen">
+	
+		.cube {
+		        position: relative;
+		        top: 200px;
+		}
+
+		.rightFace,
+		.leftFace,
+		.topFace div {
+		        padding: 10px;
+		        width: 180px;
+		        height: 180px;
+				background: -moz-linear-gradient(top, #e5e5e5 0%, #FFFFFF 100%); /* firefox */
+				background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e5e5e5), color-stop(100%,#FFFFFF)); /* webkit */
+				filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e5e5', endColorstr='#FFFFFF',GradientType=0 ); /* ie */
+				background: -o-linear-gradient(top, #e5e5e5 0%,#FFFFFF 100%); /* opera */
+		}
+
+		.rightFace,
+		.leftFace,
+		.topFace {
+		        position: absolute;
+		}	
+
+		.leftFace {
+		    -webkit-transform: skewY(30deg);
+		    -moz-transform: skewY(30deg);
+		    background-color: #ccc;
+			-moz-box-shadow: 1px 1px 3px #999999;
+		}
+
+		.rightFace {
+	        -webkit-transform: skewY(-30deg);
+	        -moz-transform: skewY(-30deg);
+		    background-color: #ddd;
+	     	left: 200px;    
+			-moz-box-shadow: 1px 1px 3px #999999;
+		}
+
+		.topFace div {
+		        -webkit-transform: skewY(-30deg) scaleY(1.16);
+		        -moz-transform: skewY(-30deg) scaleY(1.16);
+		        background-color: #eee;
+		        font-size: 0.862em;
+		}
+
+		.topFace {
+		   	-webkit-transform: rotate(60eg);
+	        -moz-transform: rotate(60deg);
+	       	left: 114px;
+		    top: -161px;
+			width: 180px;
+	        height: 180px;
+		}
+		.topFace div {
+		    -moz-transform: skew(0deg, -30deg) scale(1, 1.16);
+			background: url(ea.png) center no-repeat #ffffff; /* old browsers */
+			background: url(ea.png) center no-repeat -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+			background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* opera */
+		    font-size: 0.862em;
+		}
+		.topFace div:hover {
+			background: url(ea_h.png) center no-repeat #ffffff; /* old browsers */
+			background: url(ea_h.png) center no-repeat -moz-linear-gradient(top, #ffffff 0%, #e5e5e5 100%); /* firefox */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#e5e5e5)); /* webkit */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#e5e5e5',GradientType=0 ); /* ie */
+			background: -o-linear-gradient(top, #ffffff 0%,#e5e5e5 100%); /* opera */
+		    font-size: 0.862em;
+		}
+	
+	</style>
+</head>
+<body>
+	
+<div class="cube">
+	<div class="topFace">
+	   	<div>
+			
+		</div>
+	</div>
+	<div class="leftFace">
+		<p><strong>Electronic Arts</strong> </p>
+		<p><strong>Opdracht:</strong> Ontwerp, CMS</p>
+		<p><strong>Jaar:</strong> 2011</p>
+	</div>
+	<div class="rightFace">
+		<p>Recente Projecten</p>
+	</div>
+</div>
+	
+</body>
+</html>

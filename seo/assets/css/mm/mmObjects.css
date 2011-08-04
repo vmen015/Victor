@@ -1,0 +1,518 @@
+
+/* mmBtn */
+button.mmBtn, input.mmBtn, a.mmBtn { 
+	font: inherit;
+	font-family: Arial,Helvetica,sans-serif;
+	background-repeat: repeat-x; 
+	text-decoration: none !important; 
+	position: relative; 
+	cursor: pointer; 
+	border: 0; 
+	font-style: normal; 
+	font-weight: normal; 
+	line-height: 1; 
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;  
+	/* not all browser support these, but who cares? */
+/*	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); */
+/*	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5); */
+/*	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);*/
+  
+  /* one image for all states  see http://www.alistapart.com/articles/sprites */
+/*	background-image: url(/_img/buttons/mmbtn_m.png);*/
+  	background-position: 0 0;
+  
+  /* cross browser inline block hack 
+     see http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;  
+	/* help IE to calm down a bit */
+	zoom: 1;  
+	/*disable text selection (Firefox only)*/
+	-moz-user-select: none;
+/*	margin:0px;*/
+	border:1px solid #999;
+}
+/* hide selection background color */
+.mmBtn::selection {
+	background: transparent;
+}
+button.mmBtn:hover, input.mmBtn:hover, a.mmBtn:hover { /*background-position: 0 -22px; */ }
+button.mmBtn:active, input.mmBtn:active, a.mmBtn:active	{ 
+  background-position: 0 100%; 
+  -moz-box-shadow: inset 0 1px 5px rgba(0,0,0,0.4); 
+  /* unfortunately, Safari seems not to support inset yet */
+  -webkit-box-shadow: none;  
+  /* IE only stuff */
+  border-bottom: 0\9;
+  border-top: 1px solid #666\9;
+
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);*/
+}
+
+
+/* colors, first = default */
+button.mmBtn, input.mmBtn, a.mmBtn { 
+	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-khtml-border-radius: 5px;		
+	background-color: #e2e2e2; 
+	border-color: #999; 
+	color: #767676 !important;	
+	padding: 4px 12px 4px;
+	font-size: 11px;	
+	font-weight: bold;	
+	text-shadow: 0px 1px #fff;	
+	background-image:-moz-linear-gradient(center top , #ffffff, #e2e2e2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e2e2e2));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2')";	
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);	*/
+}
+button.mmBtn:hover, input.mmBtn:hover, a.mmBtn:hover { 
+	background-color: #f1f1f1; 
+	border-color: #7d7d7d; 
+	color: #323232;
+	color: #4d4d4d !important;
+	background-image:-moz-linear-gradient(center top , #ffffff, #b3b3b3);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#b3b3b3));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#b3b3b3');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#b3b3b3')";	
+	-webkit-box-shadow:  0px 0px 3px #ddd;
+	-moz-box-shadow:  0px 0px 3px #ddd;	
+	box-shadow:  0px 0px 3px #ddd;	
+}
+button.mmBtn:focus, input.mmBtn:focus, a.mmBtn:focus { 
+	background-color: #d6d6d6; 
+	border-color: #999999; 
+	color: #4f4f4f !important;
+	background-image:-moz-linear-gradient(center top , #f5f5f5, #e2e2e2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e2e2e2));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#e2e2e2');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#e2e2e2')";	
+	-webkit-box-shadow: inset 0px 1px 6px #fff;
+	-moz-box-shadow: inset 0px 1px 6px #fff;	
+	box-shadow: inset 0px 1px 6px #fff;	
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);	*/
+}
+button.mmBtn:active, input.mmBtn:active, a.mmBtn:active, button.mmBtn.btn-active, input.mmBtn.btn-active, a.mmBtn.btn-active { 
+	background-color: #d6d6d6; 
+	border-color: #999999; 
+	color: #4f4f4f !important;
+	padding: 4px 12px 4px;	
+	text-shadow: 0px 1px #fff;	
+	background-image:-moz-linear-gradient(center top , #e2e2e2, #f5f5f5);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#f5f5f5));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#e2e2e2', EndColorStr='#f5f5f5');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#e2e2e2', EndColorStr='#f5f5f5')";	
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);	*/
+/*	box-shadow: inset 0px 4px 5px rgba(0,0,0,0.25);
+	-webkit-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.25);
+	-moz-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.25);	*/
+}
+
+button.mmBtn.btn-default, input.mmBtn.btn-default, a.mmBtn.btn-default { font-weight:normal; }
+
+button.mmBtn.btn-neutral, input.mmBtn.btn-neutral, a.mmBtn.btn-neutral { background-color: #d9d9d9; border-color: #d9d9d9; color: #737373; border:1px solid #cecece; text-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none; }
+button.mmBtn.btn-negative, input.mmBtn.btn-negative, a.mmBtn.btn-negative, button.mmBtn.btn-neg, input.mmBtn.btn-neg, a.mmBtn.btn-neg { background-color: #e00000; border-color: #e00000; }
+button.mmBtn.btn-positive, input.mmBtn.btn-positive, a.mmBtn.btn-positive, button.mmBtn.btn-pos, input.mmBtn.btn-pos, a.mmBtn.btn-pos { background-color: #5eab39; border-color: #5eab39; }
+button.mmBtn.btn-cancel, input.mmBtn.btn-cancel, a.mmBtn.btn-cancel { background-color: #737373; border:1px solid #737373; border-color: #737373;}
+
+
+/* default stuff for x-s */
+button.mmBtn.btn-xs, input.mmBtn.btn-xs, a.mmBtn.btn-xs { padding: 4px 9px 2px; font-size: 8px; text-shadow: 0px 1px #fff; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; 	/*behavior: url(/_css/plugins/css3pie/PIE.htc);*/ }
+button.mmBtn.btn-xs:hover, input.mmBtn.btn-xs:hover, a.mmBtn.btn-xs:hover { /*background-position: 0 -18px;*/  }
+button.mmBtn.btn-xs:active, input.mmBtn.btn-xs:active, a.mmBtn.btn-xs:active, button.mmBtn.btn-xs.btn-active, input.mmBtn.btn-xs.btn-active, a.mmBtn.btn-xs.btn-active { /*background-position: 0 -36px;*/ padding: 5px 9px 1px; text-shadow: 0px 1px #fff; }
+
+/* default stuff for s */
+button.mmBtn.btn-s, input.mmBtn.btn-s, a.mmBtn.btn-s { padding: 4px 10px 2px; font-size: 9px;  border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; 	/*behavior: url(/_css/plugins/css3pie/PIE.htc);*/}
+button.mmBtn.btn-s:hover, input.mmBtn.btn-s:hover, a.mmBtn.btn-s:hover { /*background-position: 0 -18px;*/  }
+button.mmBtn.btn-s:active, input.mmBtn.btn-s:active, a.mmBtn.btn-s:active, button.mmBtn.btn-s.btn-active, input.mmBtn.btn-s.btn-active, a.mmBtn.btn-s.btn-active { /*background-position: 0 -36px;*/ padding: 5px 10px 1px; }
+
+/* default stuff for m */
+button.mmBtn.btn-m, input.mmBtn.btn-m, a.mmBtn.btn-m {   }
+button.mmBtn.btn-m:hover, input.mmBtn.btn-m:hover, a.mmBtn.btn-m:hover { /*background-position: 0 -22px; */ }
+button.mmBtn.btn-m:active, input.mmBtn.btn-m:active, a.mmBtn.btn-m:active, button.mmBtn.btn-m.btn-active, input.mmBtn.btn-m.btn-active, a.mmBtn.btn-m.btn-active { /*background-position: 0 -44px;*/ padding: 6px 12px 2px; }
+
+/* default stuff for l */
+button.mmBtn.btn-l, input.mmBtn.btn-l, a.mmBtn.btn-l { padding: 8px 22px 6px; font-size: 14px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; 	/*behavior: url(/_css/plugins/css3pie/PIE.htc);*/}
+button.mmBtn.btn-l:hover, input.mmBtn.btn-l:hover, a.mmBtn.btn-l:hover { /*background-position: 0 -32px;*/  }
+button.mmBtn.btn-l:active, input.mmBtn.btn-l:active, a.mmBtn.btn-l:active, button.mmBtn.btn-l.btn-active, input.mmBtn.btn-l.btn-active, a.mmBtn.btn-l.btn-active { /*background-position: 0 -64px;*/ padding: 9px 22px 5px; }
+
+/* default stuff for xl */
+button.mmBtn.btn-xl, input.mmBtn.btn-xl, a.mmBtn.btn-xl { padding: 9px 22px 7px; font-size: 16px; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; 	/*behavior: url(/_css/plugins/css3pie/PIE.htc);*/ }
+button.mmBtn.btn-xl:hover, input.mmBtn.btn-xl:hover, a.mmBtn.btn-xl:hover { /*background-position: 0 -40px;*/ }
+button.mmBtn.btn-xl:active, input.mmBtn.btn-xl:active, a.mmBtn.btn-xl:active, button.mmBtn.btn-xl.btn-active, input.mmBtn.btn-xl.btn-active, a.mmBtn.btn-xl.btn-active {  /*background-position: 0 -80px;*/ padding: 10px 22px 6px; }
+
+/* default stuff for xxl */
+button.mmBtn.btn-xxl, input.mmBtn.btn-xxl, a.mmBtn.btn-xxl { padding: 18px 24px 16px; font-size: 24px; font-weight: bold; border-radius: 5px; -moz-border-radius: 5px; -webkit-border-radius: 5px; -khtml-border-radius: 5px; 	/*behavior: url(/_css/plugins/css3pie/PIE.htc); */}
+button.mmBtn.btn-xxl:hover, input.mmBtn.btn-xxl:hover, a.mmBtn.btn-xxl:hover { /*background-position: 0 -40px;*/ }
+button.mmBtn.btn-xxl:active, input.mmBtn.btn-xxl:active, a.mmBtn.btn-xxl:active, button.mmBtn.btn-xxl.btn-active, input.mmBtn.btn-xxl.btn-active, a.mmBtn.btn-xxl.btn-active {  /*background-position: 0 -80px;*/ padding: 19px 24px 15px; }
+
+/* disabled buttons */
+button.mmBtn.btn-disabled, input.mmBtn.btn-disabled, a.mmBtn.btn-disabled { 
+/*	font-weight:normal; */
+	border-color: #cfcfcf; 	
+	color: #cfcfcf;
+	text-shadow: 0px 1px #eee;	
+	background-image:-moz-linear-gradient(center top , #eaeaea, #cfcfcf);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#cfcfcf));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf')";	
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);*/
+}
+button.mmBtn.btn-disabled:hover, input.mmBtn.btn-disabled:hover, a.mmBtn.btn-disabled:hover, button.mmBtn.btn-disabled:focus, input.mmBtn.btn-disabled:focus, a.mmBtn.btn-disabled:focus, button.mmBtn.btn-disabled:active, input.mmBtn.btn-disabled:active, a.mmBtn.btn-disabled:active { 
+	border-color: #cfcfcf; 	
+	background-color: #cfcfcf; /* no change */	
+	color: #cfcfcf;
+	text-shadow: 0px 1px #eee;	
+	background-image:-moz-linear-gradient(center top , #eaeaea, #cfcfcf);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#cfcfcf));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf')";
+	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;		
+/*	behavior: url(/_css/plugins/css3pie/PIE.htc);	*/
+}
+
+
+
+/* mmBtnPill */
+button.mmBtnPill, input.mmBtnPill, a.mmBtnPill { 
+	font: inherit;
+	font-family: Arial,Helvetica,sans-serif;
+	background-repeat: repeat-x; 
+	text-decoration: none; 
+	position: relative; 
+	cursor: pointer; 
+	border: 0; 
+	font-style: normal; 
+	font-weight: normal; 
+	line-height: 1; 
+	/* IE only stuff */
+	border-bottom: 1px solid transparent\9;  
+	/* not all browser support these, but who cares? */
+/*	text-shadow: 0 -1px 1px rgba(0,0,0,0.25), -2px 0 1px rgba(0,0,0,0.25); */
+/*	-moz-box-shadow: 1px 1px 3px rgba(0,0,0,0.5); */
+/*	-webkit-box-shadow: 1px 1px 3px rgba(0,0,0,0.5);*/
+  
+  /* one image for all states  see http://www.alistapart.com/articles/sprites */
+/*	background-image: url(/_img/buttons/mmbtn_m.png);*/
+  	background-position: 0 0;
+  
+  /* cross browser inline block hack 
+     see http://blog.mozilla.com/webdev/2009/02/20/cross-browser-inline-block/ */
+	display: -moz-inline-stack;
+	display: inline-block;
+	vertical-align: middle;
+	*display: inline !important;
+	position: relative;  
+	/* help IE to calm down a bit */
+	zoom: 1;  
+	/*disable text selection (Firefox only)*/
+	-moz-user-select: none;
+/*	margin:0px;*/
+	border:0px solid #999;
+	border-top: 1px solid #999;
+	border-right: 1px solid #999;
+	border-bottom: 1px solid #999;
+}
+.mmBtnPill.btn-left {
+	border-left: 1px solid #999;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 5px;	
+}
+.mmBtnPill.btn-right {
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 0px;	
+}
+/* hide selection background color */
+.mmBtnPill::selection {
+	background: transparent;
+}
+button.mmBtnPill:hover, input.mmBtnPill:hover, a.mmBtnPill:hover { /*background-position: 0 -22px; */ }
+button.mmBtnPill:active, input.mmBtnPill:active, a.mmBtnPill:active	{ 
+  background-position: 0 100%; 
+  -moz-box-shadow: inset 0 1px 5px rgba(0,0,0,0.4); 
+  /* unfortunately, Safari seems not to support inset yet */
+  -webkit-box-shadow: none;  
+  /* IE only stuff */
+  border-bottom: 0\9;
+  border-top: 1px solid #666\9;
+}
+
+
+/* colors, first = default */
+button.mmBtnPill, input.mmBtnPill, a.mmBtnPill { 
+/*	border-radius: 5px; 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-khtml-border-radius: 5px;		
+*/
+	border-color: #999; 
+	color: #767676;	
+	padding: 4px 12px 4px;
+	font-size: 11px;	
+	font-weight: bold;	
+	text-shadow: 0px 1px #fff;	
+
+	background-color: #e2e2e2; 	
+	background-image:-moz-linear-gradient(center top , #ffffff, #e2e2e2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e2e2e2));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2')";
+}
+/* no button hover */
+button.mmBtnPill:focus, input.mmBtnPill:focus, a.mmBtnPill:focus { 
+/*	background-color: #d6d6d6; */
+	border-color: #999999; 
+	color: #4f4f4f;
+/*	background-image:-moz-linear-gradient(center top , #f5f5f5, #e2e2e2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#f5f5f5), to(#e2e2e2));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#e2e2e2');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#f5f5f5', EndColorStr='#e2e2e2')";	*/
+	box-shadow: inset 0px 1px 6px #fff;
+	-webkit-box-shadow: inset 0px 1px 6px #fff;
+	-moz-box-shadow: inset 0px 1px 6px #fff;	
+}
+button.mmBtnPill:active, input.mmBtnPill:active, a.mmBtnPill:active, button.mmBtnPill.btn-active, input.mmBtnPill.btn-active, a.mmBtnPill.btn-active { 
+/*	background-color: #d6d6d6; */
+	border-color: #999999; 
+	background-image:none;
+	color: #4f4f4f;
+	padding: 4px 12px 4px;	
+	text-shadow: 0px 1px #fff;	
+	background-color: #dfdfdf;
+	font-weight: bold; 	
+/*	background-image:-moz-linear-gradient(center top , #e2e2e2, #f5f5f5);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#e2e2e2), to(#f5f5f5));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#e2e2e2', EndColorStr='#f5f5f5');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#e2e2e2', EndColorStr='#f5f5f5')";	
+*/	box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);
+	-webkit-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);
+}
+
+button.mmBtnPill.btn-default, input.mmBtnPill.btn-default, a.mmBtnPill.btn-default { font-weight:normal; }
+
+button.mmBtnPill.btn-neutral, input.mmBtnPill.btn-neutral, a.mmBtnPill.btn-neutral { background-color: #d9d9d9; border-color: #d9d9d9; color: #737373; border:1px solid #cecece; text-shadow:none; -moz-box-shadow:none; -webkit-box-shadow:none; }
+button.mmBtnPill.btn-negative, input.mmBtnPill.btn-negative, a.mmBtnPill.btn-negative, button.mmBtnPill.btn-neg, input.mmBtnPill.btn-neg, a.mmBtnPill.btn-neg { background-color: #e00000; border-color: #e00000; }
+button.mmBtnPill.btn-positive, input.mmBtnPill.btn-positive, a.mmBtnPill.btn-positive, button.mmBtnPill.btn-pos, input.mmBtnPill.btn-pos, a.mmBtnPill.btn-pos { background-color: #5eab39; border-color: #5eab39; }
+button.mmBtnPill.btn-cancel, input.mmBtnPill.btn-cancel, a.mmBtnPill.btn-cancel { background-color: #737373; border:1px solid #737373; border-color: #737373;}
+
+
+/* default stuff for x-s */
+button.mmBtnPill.btn-xs, input.mmBtnPill.btn-xs, a.mmBtnPill.btn-xs { padding: 4px 9px 2px; font-size: 8px; text-shadow: 0px 1px #fff; }
+button.mmBtnPill.btn-xs:hover, input.mmBtnPill.btn-xs:hover, a.mmBtnPill.btn-xs:hover { /*background-position: 0 -18px;*/  }
+button.mmBtnPill.btn-xs:active, input.mmBtnPill.btn-xs:active, a.mmBtnPill.btn-xs:active, button.mmBtnPill.btn-xs.btn-active, input.mmBtnPill.btn-xs.btn-active, a.mmBtnPill.btn-xs.btn-active { /*background-position: 0 -36px;*/ padding: 5px 9px 1px; text-shadow: 0px 1px #fff; }
+
+/* default stuff for s */
+button.mmBtnPill.btn-s, input.mmBtnPill.btn-s, a.mmBtnPill.btn-s { padding: 4px 10px 2px; font-size: 9px;   }
+button.mmBtnPill.btn-s:hover, input.mmBtnPill.btn-s:hover, a.mmBtnPill.btn-s:hover { /*background-position: 0 -18px;*/  }
+button.mmBtnPill.btn-s:active, input.mmBtnPill.btn-s:active, a.mmBtnPill.btn-s:active, button.mmBtnPill.btn-s.btn-active, input.mmBtnPill.btn-s.btn-active, a.mmBtnPill.btn-s.btn-active { /*background-position: 0 -36px;*/ padding: 5px 10px 1px; }
+
+/* default stuff for m */
+button.mmBtnPill.btn-m, input.mmBtnPill.btn-m, a.mmBtnPill.btn-m {   }
+button.mmBtnPill.btn-m:hover, input.mmBtnPill.btn-m:hover, a.mmBtnPill.btn-m:hover { /*background-position: 0 -22px; */ }
+button.mmBtnPill.btn-m:active, input.mmBtnPill.btn-m:active, a.mmBtnPill.btn-m:active, button.mmBtnPill.btn-m.btn-active, input.mmBtnPill.btn-m.btn-active, a.mmBtnPill.btn-m.btn-active { /*background-position: 0 -44px;*/ padding: 6px 12px 2px; }
+
+/* default stuff for l */
+button.mmBtnPill.btn-l, input.mmBtnPill.btn-l, a.mmBtnPill.btn-l { padding: 7px 22px 7px; font-size: 14px; }
+button.mmBtnPill.btn-l:hover, input.mmBtnPill.btn-l:hover, a.mmBtnPill.btn-l:hover { /*background-position: 0 -32px;*/  }
+button.mmBtnPill.btn-l:active, input.mmBtnPill.btn-l:active, a.mmBtnPill.btn-l:active, button.mmBtnPill.btn-l.btn-active, input.mmBtnPill.btn-l.btn-active, a.mmBtnPill.btn-l.btn-active { /*background-position: 0 -64px;*/ padding: 7px 22px 7px; }
+
+/* default stuff for xl */
+button.mmBtnPill.btn-xl, input.mmBtnPill.btn-xl, a.mmBtnPill.btn-xl { padding: 9px 22px 7px; font-size: 16px; }
+button.mmBtnPill.btn-xl:hover, input.mmBtnPill.btn-xl:hover, a.mmBtnPill.btn-xl:hover { /*background-position: 0 -40px;*/ }
+button.mmBtnPill.btn-xl:active, input.mmBtnPill.btn-xl:active, a.mmBtnPill.btn-xl:active, button.mmBtnPill.btn-xl.btn-active, input.mmBtnPill.btn-xl.btn-active, a.mmBtnPill.btn-xl.btn-active {  /*background-position: 0 -80px;*/ padding: 10px 22px 6px; }
+
+/* default stuff for xxl */
+button.mmBtnPill.btn-xxl, input.mmBtnPill.btn-xxl, a.mmBtnPill.btn-xxl { padding: 18px 24px 16px; font-size: 24px; font-weight: bold; }
+button.mmBtnPill.btn-xxl:hover, input.mmBtnPill.btn-xxl:hover, a.mmBtnPill.btn-xxl:hover { /*background-position: 0 -40px;*/ }
+button.mmBtnPill.btn-xxl:active, input.mmBtnPill.btn-xxl:active, a.mmBtnPill.btn-xxl:active, button.mmBtnPill.btn-xxl.btn-active, input.mmBtnPill.btn-xxl.btn-active, a.mmBtnPill.btn-xxl.btn-active {  /*background-position: 0 -80px;*/ padding: 19px 24px 15px; }
+
+/* disabled buttons */
+button.mmBtnPill.btn-disabled, input.mmBtnPill.btn-disabled, a.mmBtnPill.btn-disabled { 
+/*	font-weight:normal; */
+	border-color: #cfcfcf; 	
+	color: #cfcfcf;
+	text-shadow: 0px 1px #eee;	
+/*	background-image:-moz-linear-gradient(center top , #eaeaea, #cfcfcf);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#cfcfcf));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf')";	*/
+
+}
+button.mmBtnPill.btn-disabled:hover, input.mmBtnPill.btn-disabled:hover, a.mmBtnPill.btn-disabled:hover, button.mmBtnPill.btn-disabled:focus, input.mmBtnPill.btn-disabled:focus, a.mmBtnPill.btn-disabled:focus, button.mmBtnPill.btn-disabled:active, input.mmBtnPill.btn-disabled:active, a.mmBtnPill.btn-disabled:active { 
+	border-color: #cfcfcf; 	
+/*	background-color: #cfcfcf; 	*/
+	color: #cfcfcf;
+	text-shadow: 0px 1px #eee;	
+/*	background-image:-moz-linear-gradient(center top , #eaeaea, #cfcfcf);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#eaeaea), to(#cfcfcf));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#eaeaea', EndColorStr='#cfcfcf')";
+*/	box-shadow: none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;		
+}
+
+/* mmPlaceholder 
+
+	regular use:
+	example <input type="text" class="mmPlaceholder" data-placeholder="placeholder text here" />
+	use custom placeholder classes: 
+	example <input type="text" class="mmPlaceholder" data-placeholder="placeholder text here" data-placeholder_wrap="1" data-placeholder_class="c-b fwB fsI" />	
+*/
+.overTxtLabel { color:#bfbfbf; font-style:italic; text-shadow:none;} 
+.overTxtWrapper .overTxtLabel { font-style:null; color:null; text-shadow:none;} /* reset of overTxtLabel styles, to apply custom overTxtLabel colors, use data-placeholder_wrap="1" and add extra classNames in data-placeholder_class attribute (ie: data-placeholder_class="c-b fwB" , see mmPlaceholder.s */
+
+.wmd-panel{
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	min-width: 500px;
+	background-color: Aquamarine;
+}
+
+.wmd-button-bar {
+	position:relative;
+	width: 100%;
+	background-color: white; 
+}
+
+.wmd-input 
+{ 
+	height: 500px;
+	width: 100%;
+	background-color: white;
+	border: 1px solid DarkGray;
+}
+
+.wmd-preview { 
+	background-color: #efefef; 
+}
+
+.wmd-output { 
+	background-color: Pink;
+}
+
+.wmd-button-row {
+	position: relative; 
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	padding: 3px;  
+	height: 20px;
+}
+
+.wmd-spacer{
+	width: 1px; 
+	height: 20px; 
+	margin-left: 14px;
+	
+	position: absolute;
+	background-color: Silver;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button
+{
+	width: 20px; 
+	height: 20px; 
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	position: absolute;
+	background-image: url(../../img/wmd-buttons.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button > a
+{
+	width: 20px; 
+	height: 20px; 
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	position: absolute;
+	display: inline-block; 
+}
+
+
+/* sprite button slicing style information */
+.wmd-button-bar .wmd-bold-button    {left: 0px;}
+.wmd-button-bar .wmd-italic-button  {left: 25px;}
+.wmd-button-bar .wmd-spacer1        {left: 50px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-link-button    {left: 75px;}
+.wmd-button-bar .wmd-quote-button   {left: 100px;}
+.wmd-button-bar .wmd-code-button    {left: 125px;}
+.wmd-button-bar .wmd-image-button   {left: 150px;}
+.wmd-button-bar .wmd-spacer2        {left: 175px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-olist-button   {left: 200px;}
+.wmd-button-bar .wmd-ulist-button   {left: 225px;}
+.wmd-button-bar .wmd-heading-button {left: 250px;}
+.wmd-button-bar .wmd-hr-button      {left: 275px;}
+.wmd-button-bar .wmd-spacer3        {left: 300px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-undo-button    {left: 325px;}
+.wmd-button-bar .wmd-redo-button    {left: 350px;}
+.wmd-button-bar .wmd-help-button    {right: 0px;}
+
+
+.wmd-prompt-background
+{
+	background-color: Black;
+}
+
+.wmd-prompt-dialog
+{
+	border: 1px solid #999999;
+	background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog > div {
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+}
+
+
+.wmd-prompt-dialog > form > input[type="text"] {
+	border: 1px solid #999999;
+	color: black;
+}
+
+.wmd-prompt-dialog > form > input[type="button"]{
+	border: 1px solid #888888;
+	font-family: trebuchet MS, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+}

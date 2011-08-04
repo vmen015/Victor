@@ -1,0 +1,35 @@
+/*@font-face {font-family:
+    'mmFont';
+    src:
+    url('mmfont-webfont.eot');
+    src:
+    local('☺'), url('mmfont-webfont.woff') format('woff'), url('mmfont-webfont.ttf') format('truetype'), url('mmfont-webfont.svg#webfontjJTHv0E8') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+*/
+@font-face {
+    font-family: 'mmFont';
+    src: url('mmfont-webfont.eot');
+    src: url('mmfont-webfont.eot?#iefix') format('embedded-opentype'),
+         url('mmfont-webfont.woff') format('woff'),
+         url('mmfont-webfont.ttf') format('truetype'),
+         url('mmfont-webfont.svg#mmFontRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+.mmIcon {
+    font-weight: normal;
+    font-style: normal;
+/*    line-height: normal;*/
+    font-family: 'mmFont';
+/*    font-size: 1.1em;*/
+    position: relative;
+/*font-size:150%;*/
+}
+
+
+

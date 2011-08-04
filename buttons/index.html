@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<head>
+	<title>CSS Buttons</title>
+	
+	<link rel="stylesheet" href="assets/css/mm/mmBase.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="assets/css/mm/mmLayout.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	<link rel="stylesheet" href="assets/css/mm/mmObjects.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	<link rel="stylesheet" href="assets/css/app/app.css" type="text/css" media="screen" title="no title" charset="utf-8">
+	
+	<link rel="stylesheet" href="assets/css/mm/mmFont.css" type="text/css">
+	
+	<style type="text/css" media="screen">
+/*		.mmIcon{ font-size:200%;}*/
+	</style>
+</head>
+<body>
+	
+	<!-- <a class="btn">Button</a>
+		
+		<a class="btn btn-pill">Button</a>
+		
+		<a class="btn btn-left">btn btn-left</a>
+		<a class="btn btn-middle">btn btn-middle</a>
+		<a class="btn btn-right">btn btn-right</a>
+		 -->
+	
+	<h1>Buttons</h1>
+
+	<div class="rel m-10">
+		<p>mmBtn btn-left</p>
+		<a class="mmBtn btn-left"> Left</a>
+		<a class="mmBtn btn-middle"> <span class="mmIcon icon-save"></span>Center </a>
+		<a class="mmBtn btn-right"> Right </a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-left btn-xxl</p>
+		<a class="mmBtn btn-left btn-xxl"> Left</a>
+		<a class="mmBtn btn-middle btn-xxl"> Center </a>
+		<a class="mmBtn btn-right btn-xxl"> Right </a>
+	</div>
+
+	<div class="rel m-10">
+		<p>mmBtn mmBtnPill btn-left btn-xxl</p>
+		<a class="mmBtn mmBtnPill btn-left btn-xxl"> Left</a>
+		<a class="mmBtn mmBtnPill btn-middle btn-xxl"> Center </a><a class="mmBtn mmBtnPill btn-right btn-xxl"><span class="mmIcon icon-loading"></span>  Right </a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>mmBtn mmBtnPill btn-left</p>
+		<a class="mmBtn mmBtnPill btn-left"> button btn-left</a>
+		<a class="mmBtn mmBtnPill btn-middle"><span class="mmIcon icon-loading"></span> button btn-middle</a>
+		<a class="mmBtn mmBtnPill btn-right"> button btn-right</a>
+	</div>
+	
+	
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-disabled</p>
+		<a class="mmBtn btn-disabled "> button </a>
+		<a class="mmBtn btn-disabled btn-xxl "> button </a>
+	</div>
+
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-left</p>
+		<a class="mmBtn btn-left btn-xxl"> Left</a><a class="mmBtn btn-middle btn-active btn-xxl"> Active </a><a class="mmBtn mmBtnPill btn-right btn-xxl"> Right </a>
+	</div>
+	
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-xs</p>
+		<a class="mmBtn btn-left btn-xs">x-small</a>
+		<a class="mmBtn btn-middle btn-active btn-xs">x-small</a>
+		<a class="mmBtn btn-disabled btn-middle btn-xs">disabled</a>
+		<a class="mmBtn btn-middle btn-xs"><span class="mmIcon icon-security icon-xs "></span>icon-xs</a>
+		<a class="mmBtn btn-middle btn-xs"><span class="mmIcon icon-clock icon-s "></span>icon-s</a>
+		<a class="mmBtn btn-middle btn-xs"><span class="mmIcon icon-clock"></span>default</a>
+		<a class="mmBtn btn-middle btn-xs"><span class="mmIcon icon-clock icon-l "></span>icon-l</a>
+		<a class="mmBtn btn-middle btn-xs"><span class="mmIcon icon-clock icon-xl "></span>icon-xl</a>
+		<a class="mmBtn btn-right btn-xs"><span class="mmIcon icon-copy icon-xxl "></span>icon-xxl</a>
+		<a class="mmBtn btn-middle btn-xs btn-neg"><span class="mmIcon icon-cancel  "></span>Negative</a>
+		<a class="mmBtn btn-right btn-xs btn-pos"><span class="mmIcon icon-ok "></span>positive</a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-s</p>
+		<a class="mmBtn btn-left btn-s">small</a>
+		<a class="mmBtn btn-active btn-middle btn-s">small</a>
+		<a class="mmBtn btn-disabled btn-middle btn-s">disabled</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-clock icon-xs "></span>icon-xs</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-clock icon-s "></span>icon-s</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-clock"></span>default</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-clock icon-l "></span>icon-l</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-security icon-xl "></span>icon-xl</a>
+		<a class="mmBtn btn-middle btn-s"><span class="mmIcon icon-clock icon-xxl "></span>icon-xxl</a>
+		<a class="mmBtn btn-middle btn-s btn-neg"><span class="mmIcon icon-cancel  "></span>Negative</a>
+		<a class="mmBtn btn-right btn-s btn-pos"><span class="mmIcon icon-ok "></span>positive</a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>DEFAULT mmBtn btn-m</p>
+		<a class="mmBtn btn-left">medium</a>
+		<a class="mmBtn btn-active btn-middle btn-m">medium</a>
+		<a class="mmBtn btn-disabled btn-middle btn-m">disabled</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-clock icon-xs "></span>icon-xs</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-increase-indent icon-s "></span>icon-s</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-comment"></span>default</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-copy icon-l "></span>icon-l</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-phone-1 icon-xl "></span>icon-xl</a>
+		<a class="mmBtn btn-middle btn-m"><span class="mmIcon icon-star icon-xxl "></span>icon-xxl</a>
+		<a class="mmBtn btn-middle btn-m btn-neg"><span class="mmIcon icon-cancel  "></span>Negative</a>
+		<a class="mmBtn btn-right btn-m btn-pos"><span class="mmIcon icon-ok "></span>positive</a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-l</p>
+		<a class="mmBtn btn-left btn-l">large</a>
+		<a class="mmBtn btn-active btn-middle btn-l">large</a>
+		<a class="mmBtn btn-disabled btn-middle btn-l"><span class="mmIcon icon-decrease-indent "></span>disabled</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-clock icon-xs "></span>icon-xs</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-clock icon-s "></span>icon-s</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-increase-indent "></span> default</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-print icon-l "></span>icon-l</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-refresh icon-xl "></span>icon-xl</a>
+		<a class="mmBtn btn-middle btn-l"><span class="mmIcon icon-search icon-xxl "></span>icon-xxl</a>
+		<a class="mmBtn btn-middle btn-l btn-neg"><span class="mmIcon icon-cancel  "></span>Negative</a>
+		<a class="mmBtn btn-right btn-l btn-pos"><span class="mmIcon icon-ok "></span>positive</a>
+	</div>
+	
+	<div class="rel m-10">
+		<p>mmBtn btn-xl</p>
+		<a class="mmBtn btn-left btn-xl">x-large</a><a class="mmBtn btn-active btn-middle btn-xl">x-large</a><a class="mmBtn btn-disabled btn-middle btn-xl">disabled</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-clock icon-xs "></span>icon-xs</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-clock icon-s "></span>icon-s</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-sitemap "></span> default</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-pointer icon-l "></span>icon-l</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-marker icon-xl "></span>icon-xl</a><a class="mmBtn btn-middle btn-xl"><span class="mmIcon icon-invisible icon-xxl "></span>icon-xxl</a><a class="mmBtn btn-middle btn-xl btn-neg"><span class="mmIcon icon-cancel  "></span>Negative</a><a class="mmBtn btn-right btn-xl btn-pos"><span class="mmIcon icon-ok "></span>positive</a></div>	
+	<div class="rel m-10">
+		<p>mmBtn btn-xxl</p>
+		<a class="mmBtn mmBtnPill btn-left btn-xxl">xx-large</a>
+		<a class="mmBtn btn-active btn-middle btn-xxl">xx-large</a>
+		<a class="mmBtn btn-disabled btn-middle btn-xxl"><span class="mmIcon icon-timer icon-xl"></span>disabled</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-clock icon-xs "></span>icon-xs</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-clock icon-s "></span>icon-s</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-unlock "></span> default</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-clock icon-l "></span>icon-l</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-lock icon-xl "></span>icon-xl</a>
+		<a class="mmBtn btn-middle btn-xxl"><span class="mmIcon icon-hyves icon-xxl "></span>icon-xxl</a>
+		<a class="mmBtn btn-middle btn-xxl btn-neg"><span class="mmIcon icon-cancel "></span>Negative</a>
+		<a class="mmBtn mmBtnPill btn-right btn-xxl btn-pos"><span class="mmIcon icon-ok "></span>positive</a>
+	</div>
+	
+	<div class="rel m-10">
+		<a class="mmBtn btn-xxl btn-full"><span class="mmIcon icon-facebook icon-xxl "></span>mmBtn btn-xxl btn-full</a>
+	</div>
+	
+	<div class="rel m-10">
+		<a class="mmBtn btn-pill btn-xxl btn-full"><span class="mmIcon icon-linkedin icon-xxl "></span>mmBtn btn-pill btn-xxl btn-full</a>
+	</div>
+	
+	<div class="rel m-10">
+		<a class="mmBtn btn-full btn-xxl btn-neg"><span class="mmIcon icon-save "></span>mmBtn btn-full btn-xxl btn-neg</a>
+	</div>
+	
+	<div class="rel m-10">
+		<a class="mmBtn mmBtnPill btn-full btn-xxl btn-pos"><span class="mmIcon icon-edit "></span>mmBtn mmBtnPill btn-full btn-xxl btn-pos</a>
+	</div>
+	
+	
+	<div class="rel m-10">
+		<span style="font-size:14px; line-height:14px; color:red;">Blablabla...</span> 
+		<a class="mmBtn btn-xxl"><span class="mmIcon icon-bullets icon-xxl "></span>optie 1</a>
+		<a class="mmBtn btn-xl"><span class="mmIcon icon-hyves icon-xxl "></span>icon-xl</a>
+		<a class="mmBtn"><span class="mmIcon icon-edit"></span>Default </a>
+	</div>
+	
+
+	
+	
+	
+	
+	
+	<h1>Editor</h1>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-loading"></span></td>
+			<td>mmIcon icon-loading</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-add"></span></td>
+			<td>mmIcon icon-add </td>
+			<td>mmIcon icon-plus</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-delete"></span></td>
+			<td>mmIcon icon-delete </td>
+			<td>mmIcon icon-cancel</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-ok"></span></td>
+			<td>mmIcon icon-ok </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-edit"></span></td>
+			<td>mmIcon icon-edit </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-warning"></span></td>
+			<td>mmIcon icon-warning </td>
+			<td>mmIcon icon-error </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-save"></span></td>
+			<td>mmIcon icon-save </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-copy"></span></td>
+			<td>mmIcon icon-copy </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-align-left"></span></td>
+			<td>mmIcon icon-align-left </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-align-right"></span></td>
+			<td>mmIcon icon-align-right </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-align-center"></span></td>
+			<td>mmIcon icon-align-center </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-align-justify"></span></td>
+			<td>mmIcon icon-align-justify </td>
+		</tr>
+		
+		<tr>
+			<td><span class="mmIcon icon-bold"></span></td>
+			<td>mmIcon icon-bold </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-italic"></span></td>
+			<td>mmIcon icon-italic </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-underline"></span></td>
+			<td>mmIcon icon-underline </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-link"></span></td>
+			<td>mmIcon icon-link</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-unlink"></span></td>
+			<td>mmIcon icon-unlink </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-bullets"></span></td>
+			<td>mmIcon icon-bullets</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-numbering"></span></td>
+			<td>mmIcon icon-numbering</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-increase-indent"></span></td>
+			<td>mmIcon icon-increase-indent</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-decrease-indent"></span></td>
+			<td>mmIcon icon-decrease-indent</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-properties"></span></td>
+			<td>mmIcon icon-properties</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-source"></span></td>
+			<td>mmIcon icon-source</td>
+		</tr>
+	</table>
+		
+	<h1>Icons</h1>
+	<table>
+		
+		<tr>
+			<td><span class="mmIcon icon-info"></span></td>
+			<td>mmIcon icon-info </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-prompt"></span></td>
+			<td>mmIcon icon-prompt</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-data"></span></td>
+			<td>mmIcon icon-data </td>
+			<td>mmIcon icon-statics </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-phone"></span></td>
+			<td>mmIcon icon-phone </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-phone-1"></span></td>
+			<td>mmIcon icon-phone-1 </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-iphone"></span></td>
+			<td>mmIcon icon-iphone</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-iphone-landscape"></span></td>
+			<td>mmIcon icon-iphone-landscape</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-ipad"></span></td>
+			<td>mmIcon icon-ipad</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-ipad-landscape"></span></td>
+			<td>mmIcon icon-ipad-landscape</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-power"></span></td>
+			<td>mmIcon icon-power </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-clock"></span></td>
+			<td>mmIcon icon-clock</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-timer"></span></td>
+			<td>mmIcon icon-timer</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-mail"></span></td>
+			<td>mmIcon icon-mail</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-star"></span></td>
+			<td>mmIcon icon-star</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-star-half"></span></td>
+			<td>mmIcon icon-star-half</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-comment"></span></td>
+			<td>mmIcon icon-comment</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-comments"></span></td>
+			<td>mmIcon icon-comments</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-rss"></span></td>
+			<td>mmIcon icon-rss</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-refresh"></span></td>
+			<td>mmIcon icon-refresh</td>
+			<td>mmIcon icon-reload</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-search"></span></td>
+			<td>mmIcon icon-search</td>
+			<td>mmIcon icon-look</td>
+			<td>mmIcon icon-zoom</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-zoom-in"></span></td>
+			<td>mmIcon icon-zoom-in</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-zoom-out"></span></td>
+			<td>mmIcon icon-zoom-out</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-security"></span></td>
+			<td>mmIcon icon-security</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-label"></span></td>
+			<td>mmIcon icon-label</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-print"></span></td>
+			<td>mmIcon icon-print</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-home"></span></td>
+			<td>mmIcon icon-home</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-visible"></span></td>
+			<td>mmIcon icon-visible</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-invisible"></span></td>
+			<td>mmIcon icon-invisible</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-pointer"></span></td>
+			<td>mmIcon icon-pointer</td>
+			<td>mmIcon icon-mouse</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-marker"></span></td>
+			<td>mmIcon icon-marker</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-like"></span></td>
+			<td>mmIcon icon-like</td>
+			<td>mmIcon icon-love</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-address"></span></td>
+			<td>mmIcon icon-address</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-people"></span></td>
+			<td>mmIcon icon-people</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-sitemap"></span></td>
+			<td>mmIcon icon-sitemap</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-fullscreen"></span></td>
+			<td>mmIcon icon-fullscreen</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-fullscreen-exit"></span></td>
+			<td>mmIcon icon-fullscreen-exit</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-pan"></span></td>
+			<td>mmIcon icon-pan</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-resize"></span></td>
+			<td>mmIcon icon-resize</td>
+		</tr>
+	</table>
+	
+	
+
+
+	<h3>Arrows</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-left"></span></td>
+			<td>mmIcon icon-left </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-right"></span></td>
+			<td>mmIcon icon-right </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-top"></span></td>
+			<td>mmIcon icon-top </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-top-1"></span></td>
+			<td>mmIcon icon-top-1</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-bottom"></span></td>
+			<td>mmIcon icon-bottom </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-bottom-1"></span></td>
+			<td>mmIcon icon-bottom-1</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-back"></span></td>
+			<td>mmIcon icon-back </td>
+			<td>mmIcon icon-previous </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-to"></span></td>
+			<td>mmIcon icon-to </td>
+			<td>mmIcon icon-next </td>
+		</tr>
+	</table>
+	
+	<h3>Page</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-page"></span></td>
+			<td>mmIcon icon-page </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-add"></span></td>
+			<td>mmIcon icon-page-add </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-delete"></span></td>
+			<td>mmIcon icon-page-delete</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-ok"></span></td>
+			<td>mmIcon icon-page-ok</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-edit"></span></td>
+			<td>mmIcon icon-page-edit</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-warning"></span></td>
+			<td>mmIcon icon-page-warning </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-lock"></span></td>
+			<td>mmIcon icon-page-lock </td>
+			<td>mmIcon icon-page-locked </td>
+			<td>mmIcon icon-lock </td>
+			<td>mmIcon icon-locked </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-page-unlock"></span></td>
+			<td>mmIcon icon-page-unlock</td>
+			<td>mmIcon icon-page-unlocked</td>
+			<td>mmIcon icon-unlock</td>
+			<td>mmIcon icon-unlocked</td>
+		</tr>
+	</table>
+	
+	
+	
+	<h3>Folder</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-folder"></span></td>
+			<td>mmIcon icon-folder </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-folder-add"></span></td>
+			<td>mmIcon icon-folder-add </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-folder-delete"></span></td>
+			<td>mmIcon icon-folder-delete </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-folder-edit"></span></td>
+			<td>mmIcon icon-folder-edit </td>
+		</tr>
+	</table>
+
+
+
+	<h3>Round</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-round-ok"></span></td>
+			<td>mmIcon icon-round-ok </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-info"></span></td>
+			<td>mmIcon icon-round-info </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-add"></span></td>
+			<td>mmIcon icon-round-add </td>
+			<td>mmIcon icon-round-plus </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-delete"></span></td>
+			<td>mmIcon icon-round-delete </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-min"></span></td>
+			<td>mmIcon icon-round-min</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-up"></span></td>
+			<td>mmIcon icon-round-up</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-down"></span></td>
+			<td>mmIcon icon-round-down</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-left"></span></td>
+			<td>mmIcon icon-round-left</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-round-right"></span></td>
+			<td>mmIcon icon-round-right</td>
+		</tr>
+	</table>
+	
+	
+	
+	
+	<h3>Social</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-hyves"></span></td>
+			<td>mmIcon icon-hyves </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-facebook"></span></td>
+			<td>mmIcon icon-facebook </td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-linkedin"></span></td>
+			<td>mmIcon icon-linkedin</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-msn"></span></td>
+			<td>mmIcon icon-msn</td>
+		</tr>
+		<tr>
+			<td><span class="mmIcon icon-twitter"></span></td>
+			<td>mmIcon icon-twitter</td>
+		</tr>
+	</table>
+	
+	<h3>Player</h3>
+	<table>
+		<tr>
+			<td><span class="mmIcon icon-play"></span></td>
+			<td>mmIcon icon-play </td>
+		</tr>
+	</table>
+</body>
+</htmL>

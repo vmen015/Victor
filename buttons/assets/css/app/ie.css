@@ -1,0 +1,22 @@
+/* http://kimili.com/journal/rgba-hsla-css-generator-for-internet-explorer/ */
+body {
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#999999'); /* for IE */
+}
+#info, #lTop, #lBottom, #twitterIntro, #blog {
+		background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000)"; /* IE8 */
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#CC000000,endColorstr=#CC000000);   /* IE6 & 7 */
+	      zoom: 1;
+}
+#twitterSlideshowContainer {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000)"; /* IE8 */
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000,endColorstr=#99000000);   /* IE6 & 7 */
+	      zoom: 1;
+}
+#info.light, #blog.light {
+	background: transparent;
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#BFFFFFFF,endColorstr=#BFFFFFFF)"; /* IE8 */
+	    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#BFFFFFFF,endColorstr=#BFFFFFFF);   /* IE6 & 7 */
+	      zoom: 1;
+}

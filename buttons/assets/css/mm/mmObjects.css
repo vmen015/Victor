@@ -1,0 +1,747 @@
+.spinner {
+	position: absolute;
+	opacity: 0.9;
+	filter: alpha(opacity=90);
+	-ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+	z-index: 999;
+	background: #fff;
+}
+.spinner-msg {
+	text-align: center;
+	font-weight: bold;
+}
+
+.spinner-img {
+	background: url(http://github.com/mootools/mootools-more/raw/master/Styles/Interface/Spinner/spinner.gif) no-repeat;
+	width: 24px;
+	height: 24px;
+	margin: 0 auto;
+}
+.mmTipContainer {
+	box-shadow: 2px 2px 10px rgba(0,0,0,0.7);
+	border-radius: 5px;
+	background-color: rgba(0,0,0,0.8);	
+	color: #fff;		
+	max-width: 240px;
+	text-align:left;
+	z-index:10000;
+	font-size: 0.8em;
+}
+.mmTipContainer .tip {
+	padding: 4px 0px;
+	margin:0px 8px;
+}
+.mmTipContainer .tip .tip-title {
+
+}
+.mmTipContainer .tip .tip-text {
+	
+}
+.mmTipContainer .tip-top {
+	position: absolute;
+}
+.mmTipContainer .tip-bottom {
+
+	position: absolute;
+}
+
+/* mmSelect */
+.mmSelect {
+/*	height:23px;*/
+	border-radius: 3px;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+}
+.mmSelectContainer {
+	background-color: #e2e2e2;	
+	color: #4f4f4f;
+	border: 1px solid #999;
+	display:inline-block;
+	padding: 3px 0px 2px 0px;
+	padding: 2px 0px 1px 0px;
+	text-shadow: 0px 1px #fff;	
+	background-image:-moz-linear-gradient(center top , #ffffff, #e2e2e2);
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#e2e2e2));
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2');
+	-ms-filter: "progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#ffffff', EndColorStr='#e2e2e2')";	
+	
+	vertical-align:middle;
+	-moz-user-select: none;	
+}
+.mmSelectContainer.mmSelectFocus {
+	
+}
+.mmSelectOptionsContainer {
+	background-color: #efefef;
+	position: absolute;
+    overflow: hidden;
+    overflow-y: auto;	
+}
+span.mmSelectText {
+/*	height:100%;*/
+	vertical-align:top;	
+}
+span.mmSelectArrow {
+	text-shadow:none;
+	font-size:10px;
+	text-align:center;	
+/*	background-image: url(/_img/objects/mmselect_arrow.png);
+	background-position: center center;
+	background-repeat: no-repeat;*/
+	width: 16px;
+/*	height: 12px;	*/
+/*	height: 100%;*/
+	margin:0px;
+	vertical-align:top;
+}
+
+span.mmSelectArrow:before {
+	content: '▼';
+}
+
+/************************************************************/
+/*	mmBtn  default styling + btn-m
+/************************************************************/
+button.mmBtn, input.mmBtn, a.mmBtn { 
+	position: relative; 
+	cursor: pointer;
+	
+	display: -moz-inline-stack;
+	display: inline-block;
+	*display: inline !important;
+
+	padding: 0px 10px;
+	border: 0; 
+	border:1px solid #999;
+	border-color: #999; 
+	
+	font: inherit;
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 12px;	
+	font-weight: bold;
+	font-style: normal; 
+	
+	text-decoration: none !important; 
+	line-height: 1; 
+	height:19px;
+	line-height:19px;
+	
+	zoom: 1;  
+	-moz-user-select: none;
+	
+/*	vertical-align: middle;*/
+}
+button.mmBtn.btn-full, input.mmBtn.btn-full, a.mmBtn.btn-full {
+	position: relative;
+	display:block;
+}
+/* hide selection background color */
+.mmBtn::selection {
+	background: transparent;
+}
+
+/******************************/
+/*	mmBtn default colors
+/******************************/
+button.mmBtn, input.mmBtn, a.mmBtn { 	
+	/* default text-shadow */
+	text-shadow: 0px 1px 0.01em rgba(255, 255, 255, 0.70);
+	/* default background-color */
+	background-color: #e2e2e2; 
+	/* default gradient */
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0) 50%), -moz-linear-gradient(top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(40%,rgba(255,255,255,0))),  -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 50%), -webkit-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 50%),-o-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* Opera11.10+ */
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 50%),-ms-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 50%), progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ), ; /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,0.6) 0%,rgba(255,255,255,0) 50%), linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* W3C */
+	/* default font-color */
+	color: #767676 !important;
+}
+button.mmBtn:hover, input.mmBtn:hover, a.mmBtn:hover { 
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(255,255,255,0))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%); /* Opera11.10+ */
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%), progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ), ; /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0) 100%); /* W3C */
+	
+	-webkit-box-shadow:  0px 0px 5px #fff;
+	-moz-box-shadow:  0px 0px 5px #fff;	
+	box-shadow:  0px 0px 5px #fff;		
+	
+	border-color: #7d7d7d; 
+	color: #4d4d4d !important;
+}
+button.mmBtn:focus, input.mmBtn:focus, a.mmBtn:focus { 
+	-webkit-box-shadow: inset 0px 1px 6px #fff;
+	-moz-box-shadow: inset 0px 1px 6px #fff;	
+	box-shadow: inset 0px 1px 6px #fff;	
+	
+	border-color: #999999; 	
+	color: #4f4f4f !important;
+}
+button.mmBtn:active, input.mmBtn:active, a.mmBtn:active, button.mmBtn.btn-active, input.mmBtn.btn-active, a.mmBtn.btn-active { 
+	text-shadow: 0px 1px 0 rgba(255, 255, 255, 0.30);	
+	-webkit-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);
+	-moz-box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);
+	box-shadow: inset 0px 4px 5px rgba(0,0,0,0.15);	
+
+	border-color: #999999; 
+	color: #4f4f4f !important;	
+}
+
+
+
+.mmBtn.btn-left{ 
+}
+.mmBtn.btn-middle{ 
+	border-left: 0px;
+}
+.mmBtn.btn-right{ 
+	border-left: 0px;
+}
+
+
+
+
+/******************************/
+/*	Default stuff for all sizes + active
+/******************************/
+/*******
+   default for all  
+*******/
+button.mmBtn:active, input.mmBtn:active, a.mmBtn:active, button.mmBtn.btn-active, input.mmBtn.btn-active, a.mmBtn.btn-active,
+button.mmBtn.btn-xs:active, input.mmBtn.btn-xs:active, a.mmBtn.btn-xs:active, button.mmBtn.btn-xs.btn-active, input.mmBtn.btn-xs.btn-active, a.mmBtn.btn-xs.btn-active,
+button.mmBtn.btn-s:active, input.mmBtn.btn-s:active, a.mmBtn.btn-s:active, button.mmBtn.btn-s.btn-active, input.mmBtn.btn-s.btn-active, a.mmBtn.btn-s.btn-active,
+button.mmBtn.btn-m:active, input.mmBtn.btn-m:active, a.mmBtn.btn-m:active, button.mmBtn.btn-m.btn-active, input.mmBtn.btn-m.btn-active, a.mmBtn.btn-m.btn-active,
+button.mmBtn.btn-l:active, input.mmBtn.btn-l:active, a.mmBtn.btn-l:active, button.mmBtn.btn-l.btn-active, input.mmBtn.btn-l.btn-active, a.mmBtn.btn-l.btn-active,
+button.mmBtn.btn-xl:active, input.mmBtn.btn-xl:active, a.mmBtn.btn-xl:active, button.mmBtn.btn-xl.btn-active, input.mmBtn.btn-xl.btn-active, a.mmBtn.btn-xl.btn-active,
+button.mmBtn.btn-xxl:active, input.mmBtn.btn-xxl:active, a.mmBtn.btn-xxl:active, button.mmBtn.btn-xxl.btn-active, input.mmBtn.btn-xxl.btn-active, a.mmBtn.btn-xxl.btn-active{
+	background-image: -moz-linear-gradient(top, rgba(0,0,0,0.20) 0%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.20)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0.15) 100%); /* Opera11.10+ */
+	background-image: -ms-linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0.15) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0.15) 100%), progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ), ; /* IE6-9 */
+	background-image: linear-gradient(top, rgba(0,0,0,0.20) 0%,rgba(0,0,0,0.15) 100%); /* W3C */
+}
+
+/*******
+   x-s  
+*******/
+button.mmBtn.btn-xs, input.mmBtn.btn-xs, a.mmBtn.btn-xs { 
+	height:12px; padding:0px 4px; line-height:12px;  font-size: 8px;  
+}
+button.mmBtn.btn-xs:active, input.mmBtn.btn-xs:active, a.mmBtn.btn-xs:active, button.mmBtn.btn-xs.btn-active, input.mmBtn.btn-xs.btn-active, a.mmBtn.btn-xs.btn-active {
+	height:12px; padding:0px 4px; line-height:12px;  
+	-webkit-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 2px 2px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 2px 2px rgba(0,0,0,0.20);
+}
+/*******
+   s  
+*******/
+button.mmBtn.btn-s, input.mmBtn.btn-s, a.mmBtn.btn-s { 
+	height:15px;  line-height:15px;  padding: 0px 8px 0px; font-size: 10px;  
+}
+button.mmBtn.btn-s:active, input.mmBtn.btn-s:active, a.mmBtn.btn-s:active, button.mmBtn.btn-s.btn-active, input.mmBtn.btn-s.btn-active, a.mmBtn.btn-s.btn-active { 
+	height:15px; line-height:15px;  padding: 0px 8px 0px; 
+	-webkit-box-shadow: inset 0px 3px 3px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 3px 3px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 3px 3px rgba(0,0,0,0.20);	
+}
+/*******
+   m  
+*******/
+button.mmBtn.btn-m, input.mmBtn.btn-m, a.mmBtn.btn-m {  
+	height:19px; line-height:19px; /* font-size is same as default mmBtn */
+}
+button.mmBtn.btn-m:active, input.mmBtn.btn-m:active, a.mmBtn.btn-m:active, button.mmBtn.btn-m.btn-active, input.mmBtn.btn-m.btn-active, a.mmBtn.btn-m.btn-active {
+	-webkit-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);	
+}
+button.mmBtn, input.mmBtn, a.mmBtn {  
+/*	height:19px; line-height:19px;  padding: 0px 12px 0px;  */
+}
+button.mmBtn:active, input.mmBtn:active, a.mmBtn:active, button.mmBtn.btn-active, input.mmBtn.btn-active, a.mmBtn.btn-active {
+/*	height:19px; line-height:19px;  padding: 0px 12px 0px; */
+	-webkit-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);	
+}
+/*******
+   l  
+*******/
+button.mmBtn.btn-l, input.mmBtn.btn-l, a.mmBtn.btn-l {  
+	height:28px; line-height:28px;  padding: 0px 12px 0px; font-size: 14px; 
+}
+button.mmBtn.btn-l:active, input.mmBtn.btn-l:active, a.mmBtn.btn-l:active, button.mmBtn.btn-l.btn-active, input.mmBtn.btn-l.btn-active, a.mmBtn.btn-l.btn-active { 
+	height:28px; line-height:28px;  padding: 0px 12px 0px; 
+	-webkit-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 4px 4px rgba(0,0,0,0.20);	
+}
+/*******
+   xl  
+*******/
+button.mmBtn.btn-xl, input.mmBtn.btn-xl, a.mmBtn.btn-xl {  
+	height:32px; line-height:32px;  padding: 0px 14px 0px; font-size: 16px; 
+}
+button.mmBtn.btn-xl:active, input.mmBtn.btn-xl:active, a.mmBtn.btn-xl:active, button.mmBtn.btn-xl.btn-active, input.mmBtn.btn-xl.btn-active, a.mmBtn.btn-xl.btn-active {  
+	height:32px; line-height:32px;  padding: 0px 14px 0px; 
+	-webkit-box-shadow: inset 0px 6px 6px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 6px 6px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 6px 6px rgba(0,0,0,0.20);	
+}
+/*******
+   xxl  
+*******/
+button.mmBtn.btn-xxl, input.mmBtn.btn-xxl, a.mmBtn.btn-xxl { 
+	text-shadow:0px -1px 0px rgba(0,0,0,0.3), 0px 1px 0px rgba(255,255,255,0.8);  
+	height:58px; line-height:58px;  padding: 0px 16px 0px;  font-size: 24px; font-weight: bold; 
+}
+button.mmBtn.btn-xxl:active, input.mmBtn.btn-xxl:active, a.mmBtn.btn-xxl:active, button.mmBtn.btn-xxl.btn-active, input.mmBtn.btn-xxl.btn-active, a.mmBtn.btn-xxl.btn-active{ 
+	height:58px; line-height:58px;  padding: 0px 16px 0px; 
+	-webkit-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20); 
+	box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20);	
+}
+
+
+
+
+
+/******************************/
+/*	Standard button with different gradient
+/******************************/
+/*******
+   Negative
+*******/
+button.mmBtn.btn-negative, input.mmBtn.btn-negative, a.mmBtn.btn-negative, button.mmBtn.btn-neg, input.mmBtn.btn-neg, a.mmBtn.btn-neg {  
+	border-color: #e00000; 
+	background-color: #ff3019;
+	text-shadow: 0px 1px #f4b7b7;
+	color: #BD0000 !important;	
+}
+button.mmBtn.btn-negative:active, input.mmBtn.btn-negative:active, a.mmBtn.btn-negative:active, button.mmBtn.btn-neg:active, input.mmBtn.btn-neg:active, a.mmBtn.btn-neg:active {  	
+	text-shadow: 0px 1px #bd0000;
+	color:#fe7e7e !important;
+}
+button.mmBtn.btn-negative:hover, input.mmBtn.btn-negative:hover, a.mmBtn.btn-negative:hover, button.mmBtn.btn-neg:hover, input.mmBtn.btn-neg:hover, a.mmBtn.btn-neg:hover,
+button.mmBtn.btn-negative:focus, input.mmBtn.btn-negative:focus, a.mmBtn.btn-negative:focus, button.mmBtn.btn-neg:focus, input.mmBtn.btn-neg:focus, a.mmBtn.btn-neg:hover{
+	color: #660000 !important;
+	-webkit-box-shadow: 0 0 5px #e00000;	
+	-moz-box-shadow: 0 0 5px #e00000;	
+	box-shadow: 0 0 5px #e00000;
+}
+
+/*******
+   Positive
+*******/
+button.mmBtn.btn-positive, input.mmBtn.btn-positive, a.mmBtn.btn-positive, button.mmBtn.btn-pos, input.mmBtn.btn-pos, a.mmBtn.btn-pos { 
+	border-color: #84ab35; 
+	background-color: #b4df5b; /* Old browsers */	
+	text-shadow: 0px 1px #fff;	
+	color: #65801b !important;	
+}
+button.mmBtn.btn-positive:active, input.mmBtn.btn-positive:active, a.mmBtn.btn-positive:active, button.mmBtn.btn-pos:active, input.mmBtn.btn-pos:active, a.mmBtn.btn-pos:active { 
+	text-shadow: 0px 1px #9bc841;
+	color:#c9ee7e !important;
+	-webkit-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20);
+	-moz-box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20);	
+	box-shadow: inset 0px 10px 10px rgba(0,0,0,0.20);	
+}
+button.mmBtn.btn-positive:hover, input.mmBtn.btn-positive:hover, a.mmBtn.btn-positive:hover, button.mmBtn.btn-pos:hover, input.mmBtn.btn-pos:hover, a.mmBtn.btn-pos:hover,
+button.mmBtn.btn-positive:focus, input.mmBtn.btn-positive:focus, a.mmBtn.btn-positive:focus, button.mmBtn.btn-pos:focus, input.mmBtn.btn-pos:focus, a.mmBtn.btn-pos:hover{
+	color: #3c4d10 !important;
+	-webkit-box-shadow: 0 0 8px #84ab35;	
+	-moz-box-shadow: 0 0 8px #84ab35;	
+	box-shadow: 0 0 8px #84ab35;
+}
+
+/*******
+   Disabled
+*******/
+button.mmBtn.btn-disabled, input.mmBtn.btn-disabled, a.mmBtn.btn-disabled { 	
+	text-shadow: 0px 1px #eee;
+	color: #ccc;
+}
+button.mmBtn.btn-disabled:hover, input.mmBtn.btn-disabled:hover, a.mmBtn.btn-disabled:hover, button.mmBtn.btn-disabled:focus, input.mmBtn.btn-disabled:focus, a.mmBtn.btn-disabled:focus, button.mmBtn.btn-disabled:active, input.mmBtn.btn-disabled:active, a.mmBtn.btn-disabled:active { 
+	background-image: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0) 50%), -moz-linear-gradient(top, rgba(0,0,0,0) 60%, rgba(0,0,0,0.15) 100%); /* FF3.6+ */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(40%,rgba(255,255,255,0))),  -webkit-gradient(linear, left top, left bottom, color-stop(60%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.15))); /* Chrome,Safari4+ */
+	background-image: -webkit-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 40%), -webkit-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* Chrome10+,Safari5.1+ */
+	background-image: -o-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 40%),-o-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* Opera11.10+ */
+	background-image: -ms-linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 40%),-ms-linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* IE10+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,0.5) 0%,rgba(255,255,255,0) 40%), progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=0 ), ; /* IE6-9 */
+	background-image: linear-gradient(top, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 40%), linear-gradient(top, rgba(0,0,0,0) 60%,rgba(0,0,0,0.15) 100%); /* W3C */
+	
+	-moz-box-shadow:none;
+	-webkit-box-shadow:none;
+	color: #ccc !important;
+}
+
+
+
+/******************************/
+/*	btn-pill
+/******************************/
+button.btn-pill, input.btn-pill, a.btn-pill { 
+	-moz-border-radius: 5px; 
+	-webkit-border-radius: 5px; 
+	-khtml-border-radius: 5px;
+	border-radius: 5px; 
+	
+}
+/*****************/
+/*	btn-left
+/*****************/
+.btn-pill.btn-left {
+	border-left: 1px solid #999;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 5px;	
+}
+/*****************/
+/*	btn-right
+/*****************/
+.btn-pill.btn-right {
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 5px;
+	-moz-border-radius-bottomright: 5px;
+	-moz-border-radius-bottomleft: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 0px;	
+}
+/*****************/
+/*	btn-middle
+/*****************/
+.btn-pill.btn-middle {
+	border-left: 0px;
+	-webkit-border-top-left-radius: 0px;
+	-webkit-border-top-right-radius: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	-moz-border-radius-topleft: 0px;
+	-moz-border-radius-topright: 0px;
+	-moz-border-radius-bottomright: 0px;
+	-moz-border-radius-bottomleft: 0px;
+	border-top-left-radius: 0px;
+	border-top-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+	border-bottom-left-radius: 0px;	
+}
+.btn-pill::selection {
+	background: transparent;
+}
+
+button.mmBtn.btn-default, input.mmBtn.btn-default, a.mmBtn.btn-default { font-weight:bold !important; border-width:2px; }
+
+
+
+
+/************************************************************/
+/*	mmIcon
+/************************************************************/
+.mmIcon { vertical-align:middle;  }
+.mmBtn .mmIcon { vertical-align:none !important; }
+.btn-m .mmIcon { }
+
+
+
+.btn-xs .mmIcon{ }
+.btn-s .mmIcon{ /*top:-5%; */}
+.btn-m .mmIcon{  /*top:-5%; */}
+.btn-l .mmIcon{  /*top:-1%; */}
+.btn-xl .mmIcon{}
+.btn-xxl .mmIcon{}
+
+.icon-xs{  font-size:50%;  }
+.icon-s{  font-size:75%;  }
+.icon-l{  font-size:125%;  }
+.icon-xl{  font-size:150%; }
+.icon-xxl{  font-size:200%; }
+
+
+.icon-loading:before{ content: "? "; }
+
+
+/*****************/
+/*	mmIcon EDITOR
+/*****************/
+.icon-add:before, .icon-plus:before{ content: "A";}
+.icon-delete:before, .icon-cancel:before{ content: "Q";}
+.icon-ok:before{ content: "I";}
+.icon-edit:before{ content: "[";}
+.icon-warning:before, .icon-error:before{ content: "B";}
+.icon-save:before{ content: "k";}
+.icon-copy:before{ content: "K";}
+.icon-align-left:before{ content: "#";}
+.icon-align-right:before{ content: "$";}
+.icon-align-center:before{ content: "&";}
+.icon-align-justify:before{ content: "%";}
+.icon-bold:before{ content: "'";}
+.icon-italic:before{ content: "(";}
+.icon-underline:before{ content: ")";}
+.icon-link:before{ content: "!";}
+.icon-unlink:before{ content: '"'}
+.icon-bullets:before{ content: "+"}
+.icon-numbering:before{ content: ","}
+.icon-increase-indent:before{ content: "-"}
+.icon-decrease-indent:before{ content: "."}
+.icon-properties:before{ content: "_"}
+.icon-source:before{ content: "ë"}
+/*****************/
+/*	mmIcon other
+/*****************/
+.icon-info:before{ content: "Â";}
+.icon-prompt:before{ content: "Ã";}
+.icon-data:before, .icon-statics:before{ content: "G";}
+.icon-phone:before{ content: "w";}
+.icon-phone-1:before{ content: "v";}
+.icon-iphone:before{ content: "Å";}
+.icon-iphone-landscape:before{ content: "Ç";}
+.icon-ipad:before{ content: "É";}
+.icon-ipad-landscape:before{ content: "Ñ";}
+.icon-power:before{ content: "y";}
+.icon-clock:before{ content: "z";}
+.icon-timer:before{ content: "g";}
+.icon-mail:before{ content:"U";}
+.icon-star:before{ content:"e";}
+.icon-star-half:before{ content:"d";}
+.icon-comment:before{ content:"/";}
+.icon-comments:before{ content:"S";}
+.icon-rss:before{ content:"R";}
+.icon-refresh:before, .icon-reload:before{ content:"l";}
+.icon-search:before, .icon-look:before, .icon-zoom:before{ content:"j";}
+.icon-zoom-in:before{ content:"í";}
+.icon-zoom-out:before{ content:"ì";}
+.icon-security:before{ content:"i"}
+.icon-label:before{ content:"f"}
+.icon-print:before{ content:"m"}
+.icon-home:before{ content:"Z"}
+.icon-visible:before{ content:"V";}
+.icon-invisible:before{ content:"X";}
+.icon-pointer:before, .icon-mouse:before{ content:"O";}
+.icon-marker:before{ content:"M";}
+.icon-like:before, .icon-love:before, .icon-favorite:before{ content:"W";}
+.icon-address:before{ content:"J";}
+.icon-people:before, .icon-users:before{ content:"0";}
+.icon-sitemap:before{ content:"h";}
+.icon-fullscreen:before{  content:"á";}
+.icon-fullscreen-exit:before{  content:"à";}
+.icon-pan:before{  content:"â";}
+.icon-resize:before{  content:"ä";}
+/*****************/
+/*	mmIcon arrows
+/*****************/
+.icon-left:before{ content: "D";}
+.icon-right:before{ content: "E";}
+.icon-top:before{ content: "F";}
+.icon-top-1:before{ content: "À";}
+.icon-bottom:before{ content: "C";}
+.icon-bottom-1:before{ content: "Á";}
+.icon-back:before{ content: "a";}
+.icon-to:before, .icon-next:before{ content: "b";}
+/*****************/
+/*	mmIcon page
+/*****************/
+.icon-page:before{ content: "n";}
+.icon-page-add:before{ content: "o";}
+.icon-page-delete:before{ content: "p";}
+.icon-page-ok:before{ content: "q";}
+.icon-page-edit:before{ content: "r";}
+.icon-page-warning:before{ content: "s";}
+.icon-page-lock:before, .icon-page-locked:before, .icon-lock:before, .icon-locked:before{ content: "t";}
+.icon-page-unlock:before, .icon-page-unlocked:before, .icon-unlock:before, .icon-unlocked:before{ content: "u";}
+
+.icon-public:before { content: "u";}
+.icon-private:before { content: "t";}
+/*****************/
+/*	mmIcon folder
+/*****************/
+.icon-folder:before{content: "2";}
+.icon-folder-add:before{content: "3";}
+.icon-folder-delete:before{content: "4";}
+.icon-folder-edit:before{content: "5";}
+/*****************/
+/*	mmIcon round
+/*****************/
+.icon-round-ok:before{ content: "6";}
+.icon-round-info:before{ content: "8";}
+.icon-round-add:before, .icon-round-plus:before{ content: "9";}
+.icon-round-delete:before{ content: "7";}
+.icon-round-min:before{ content: ":";}
+.icon-round-up:before{ content: "<";}
+.icon-round-down:before{ content: ";";}
+.icon-round-left:before{ content: "=";}
+.icon-round-right:before{ content: ">";}
+/*****************/
+/*	mmIcon social
+/*****************/
+.icon-hyves:before{content:"H";}
+.icon-facebook:before{content:"T";}
+.icon-linkedin:before{content:"L";}
+.icon-msn:before{content:"N";}
+.icon-twitter:before{content:"c";}
+/*****************/
+/*	mmIcon player
+/*****************/
+.icon-play:before{content:"P";}
+
+/* mmPlaceholder 
+
+	regular use:
+	example <input type="text" class="mmPlaceholder" data-placeholder="placeholder text here" />
+	use custom placeholder classes: 
+	example <input type="text" class="mmPlaceholder" data-placeholder="placeholder text here" data-placeholder_wrap="1" data-placeholder_class="c-b fwB fsI" />	
+*/
+.overTxtLabel { color:#bfbfbf; font-style:italic; text-shadow:none;} 
+.overTxtWrapper .overTxtLabel { font-style:null; color:null; text-shadow:none;} /* reset of overTxtLabel styles, to apply custom overTxtLabel colors, use data-placeholder_wrap="1" and add extra classNames in data-placeholder_class attribute (ie: data-placeholder_class="c-b fwB" , see mmPlaceholder.s */
+
+.wmd-panel{
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	min-width: 500px;
+	background-color: Aquamarine;
+}
+
+.wmd-button-bar {
+	position:relative;
+	width: 100%;
+	background-color: white; 
+}
+
+.wmd-input 
+{ 
+	height: 500px;
+	width: 100%;
+	background-color: white;
+	border: 1px solid DarkGray;
+}
+
+.wmd-preview { 
+	background-color: #efefef; 
+}
+
+.wmd-output { 
+	background-color: Pink;
+}
+
+.wmd-button-row {
+	position: relative; 
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-top: 10px;
+	padding: 3px;  
+	height: 20px;
+}
+
+.wmd-spacer{
+	width: 1px; 
+	height: 20px; 
+	margin-left: 14px;
+	
+	position: absolute;
+	background-color: Silver;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button
+{
+	width: 20px; 
+	height: 20px; 
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	position: absolute;
+	background-image: url(../../img/wmd-buttons.png);
+	background-repeat: no-repeat;
+	background-position: 0px 0px;
+	display: inline-block; 
+	list-style: none;
+}
+
+.wmd-button > a
+{
+	width: 20px; 
+	height: 20px; 
+	margin-left: 5px;
+	margin-right: 5px;
+	
+	position: absolute;
+	display: inline-block; 
+}
+
+
+/* sprite button slicing style information */
+.wmd-button-bar .wmd-bold-button    {left: 0px;}
+.wmd-button-bar .wmd-italic-button  {left: 25px;}
+.wmd-button-bar .wmd-spacer1        {left: 50px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-link-button    {left: 75px;}
+.wmd-button-bar .wmd-quote-button   {left: 100px;}
+.wmd-button-bar .wmd-code-button    {left: 125px;}
+.wmd-button-bar .wmd-image-button   {left: 150px;}
+.wmd-button-bar .wmd-spacer2        {left: 175px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-olist-button   {left: 200px;}
+.wmd-button-bar .wmd-ulist-button   {left: 225px;}
+.wmd-button-bar .wmd-heading-button {left: 250px;}
+.wmd-button-bar .wmd-hr-button      {left: 275px;}
+.wmd-button-bar .wmd-spacer3        {left: 300px; background-image: url('separator.png');}
+.wmd-button-bar .wmd-undo-button    {left: 325px;}
+.wmd-button-bar .wmd-redo-button    {left: 350px;}
+.wmd-button-bar .wmd-help-button    {right: 0px;}
+
+
+.wmd-prompt-background
+{
+	background-color: Black;
+}
+
+.wmd-prompt-dialog
+{
+	border: 1px solid #999999;
+	background-color: #F5F5F5;
+}
+
+.wmd-prompt-dialog > div {
+	font-size: 0.8em;
+	font-family: arial, helvetica, sans-serif;
+}
+
+
+.wmd-prompt-dialog > form > input[type="text"] {
+	border: 1px solid #999999;
+	color: black;
+}
+
+.wmd-prompt-dialog > form > input[type="button"]{
+	border: 1px solid #888888;
+	font-family: trebuchet MS, helvetica, sans-serif;
+	font-size: 0.8em;
+	font-weight: bold;
+}
