@@ -57,3 +57,5 @@ echo nl2br($_POST['test']);
 //     $_COOKIE = json_decode(stripslashes(json_encode($_COOKIE, JSON_HEX_APOS)), true);
 //     $_REQUEST = json_decode(stripslashes(json_encode($_REQUEST, JSON_HEX_APOS)), true);
 // }
+
+// no meer zooi
